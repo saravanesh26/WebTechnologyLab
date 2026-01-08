@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Task Board</h1>
+            <p>Drag and drop tasks to manage your workflow</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="taskInput" placeholder="Enter task name..." autocomplete="off">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="board">
+            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>To Do</h2>
+                <div class="task-list" id="todo-list">
+                    <!-- Tasks will be added here -->
+                </div>
+            </div>
+            <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>In Progress</h2>
+                <div class="task-list" id="inprogress-list"></div>
+            </div>
+            <div class="column" id="completed" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Completed</h2>
+                <div class="task-list" id="completed-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
