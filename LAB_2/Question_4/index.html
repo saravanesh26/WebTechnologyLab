@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>User Management</h1>
+            <p class="subtitle">Secure Pro LocalStorage System</p>
+        </header>
+
+        <!-- Registration Section -->
+        <section class="card animate-entry" style="animation-delay: 0.1s;">
+            <div class="form-header">
+                <h2>New Registration</h2>
+            </div>
+            <form id="registrationForm" novalidate>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="ex. John Doe" required>
+                    <span class="error-message">Name is required</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="ex. john@example.com" required>
+                    <span class="error-message">Enter a valid email</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="ex. 9876543210" maxlength="10" required>
+                    <span class="error-message">10-digit mobile number required</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                    <span class="error-message">Min 6 characters required</span>
+                </div>
+
+                <div class="full-width">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <ion-icon name="person-add-outline"></ion-icon>
+                        Register User
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Display Section -->
+        <section class="card animate-entry" style="animation-delay: 0.2s;">
+            <div class="table-header">
+                <h2>Registered Users</h2>
+                <button id="clearAllBtn" class="btn btn-danger">
+                    <ion-icon name="trash-outline"></ion-icon>
+                    Clear All
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- Rows will be injected here -->
+                    </tbody>
+                </table>
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    No users registered yet.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastIcon"></span>
+        <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
