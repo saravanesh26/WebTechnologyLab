@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Experience | Lab 2 Ex 2</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Multimedia Player</h1>
+        <p class="subtitle">HTML5 Audio & Video Experience</p>
+    </header>
+
+    <div class="media-container">
+        <!-- Audio Section -->
+        <article class="media-card">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                Audio Player
+            </h2>
+            <audio id="audio-player" controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="time-display">
+                <span class="time-label">Time:</span>
+                <span id="audio-time">00:00 / 00:00</span>
+            </div>
+        </article>
+
+        <!-- Video Section -->
+        <article class="media-card">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                Video Player
+            </h2>
+            <video id="video-player" controls poster="">
+                <source src="files/VID20251225141300.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <div class="time-display">
+                <span class="time-label">Time:</span>
+                <span id="video-time">00:00 / 00:00</span>
+            </div>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+:root {
+  --bg-color: #0f0f0f;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-color: #bb86fc;
+  --bg-gradient: linear-gradient(135deg, #463496 0%, #928dab 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #bb86fc, #03dac6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap-reverse;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.media-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.9s ease, box-shadow 0.9s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+.media-card h2 {
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.time-display {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: auto; /* Push to bottom if content varies */
+}
+
+.time-label {
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+}
+
+.media-card iframe {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+    aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 768px) {
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
