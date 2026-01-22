@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time User Activity Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Activity Monitor</h1>
+
+        <div class="controls">
+            <button id="reset-btn">Reset Log</button>
+            <button id="export-btn">Export Log</button>
+        </div>
+
+        <div id="warning-msg" class="warning" style="display:none;">
+            ⚠️ Suspicious Activity Detected! (High frequency of events)
+        </div>
+
+        <div class="log-container">
+            <h3>Activity Log</h3>
+            <div id="activity-list"></div>
+        </div>
+
+        <!-- Some interactive elements to test -->
+        <div class="test-area">
+            <p>Interact with this page (Click, Type, Focus inputs) to see logs.</p>
+            <input type="text" placeholder="Type something here...">
+            <button>Click Me</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

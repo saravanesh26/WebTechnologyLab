@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.warning {
+    background-color: #ffdddd;
+    color: red;
+    padding: 15px;
+    border: 1px solid red;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.log-container {
+    border: 1px solid #333;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.log-entry {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.test-area {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed #aaa;
+    background-color: #eee;
+}
