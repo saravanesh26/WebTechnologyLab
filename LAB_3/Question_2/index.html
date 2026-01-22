@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Shopping Cart</title>
+    <!-- Link to our simple CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Intelligent Shopping Cart</h1>
+    </header>
+
+    <div class="container">
+        <!-- Section for displaying products -->
+        <section id="product-list" class="products">
+            <!-- Products will be inserted here by JavaScript -->
+            <h2>Available Products</h2>
+            <div id="products-container" class="grid"></div>
+        </section>
+
+        <!-- Section for the Cart -->
+        <aside id="cart-section" class="cart">
+            <h2>Your Cart</h2>
+            
+            <!-- Cart Items List -->
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <!-- Cart Summary (Total & Discounts) -->
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="subtotal-price">$0.00</span>
+                </div>
+                <div id="discounts-container">
+                    <!-- Applied discounts will appear here -->
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+            </div>
+
+            <!-- Coupon Input -->
+            <div class="coupon-section">
+                <input type="text" id="coupon-input" placeholder="Enter coupon code">
+                <button onclick="applyCoupon()">Apply Coupon</button>
+                <p id="coupon-message"></p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Link to our Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
