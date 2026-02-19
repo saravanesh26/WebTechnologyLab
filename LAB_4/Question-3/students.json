@@ -1,0 +1,22 @@
+{
+    "students": [
+        {
+            "id": "101",
+            "name": "Arjun Sharma",
+            "department": "CSE",
+            "marks": 95
+        },
+        {
+            "id": "102",
+            "name": "Priya Reddy",
+            "department": "ECE",
+            "marks": 88
+        },
+        {
+            "id": "103",
+            "name": "Rohan Mehta",
+            "department": "MECH",
+            "marks": 76
+        }
+    ]
+}

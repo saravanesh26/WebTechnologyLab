@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Student Management | Lab 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Student Management System</h1>
+            <p class="subtitle">CRUD Operations via AJAX & REST API</p>
+        </header>
+
+        <!-- Student Form -->
+        <div class="card">
+            <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">Manage Student</h2>
+            <form id="studentForm">
+                <input type="hidden" id="studentIdDb"> <!-- Hidden field for storing DB ID if editing -->
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" placeholder="e.g., 101" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="e.g., Arjun Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" placeholder="e.g., CSE" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marks">Marks</label>
+                        <input type="number" id="marks" placeholder="0-100" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" id="cancelBtn" class="btn-danger" style="display: none;">Cancel</button>
+                    <button type="submit" class="btn-primary" id="saveBtn">Add Student</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Student List -->
+        <h2 style="font-size: 1.5rem; margin-top: 1rem;">Student Records</h2>
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Marks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows injected via JS -->
+                </tbody>
+            </table>
+
+            <div id="emptyState" class="empty-state">
+                <p>No student records found.</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #58a6ff;">Add a student to get started.</p>
+            </div>
+
+            <div id="loadingState" style="text-align: center; padding: 2rem; display: none;">
+                <p style="color: var(--text-secondary);">Loading data...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
