@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Product Inventory System</h1>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by Category, Name, or ID...">
+            </div>
+            <div id="totalValue" class="total-value-box">
+                Total Value: $0.00
+            </div>
+        </div>
+
+        <!-- Inventory Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price ($)</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryBody">
+                    <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+        <!-- Add/Edit Product Form -->
+        <div class="form-section">
+            <h2 id="formTitle">Add New Product</h2>
+            <form id="productForm" data-mode="add">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="productId">Product ID</label>
+                        <input type="text" id="productId" required placeholder="e.g., P001">
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">Name</label>
+                        <input type="text" id="productName" required placeholder="Product Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Category</label>
+                        <select id="productCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Storage">Storage</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price ($)</label>
+                        <input type="number" id="productPrice" step="0.01" min="0" required placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="productStock">Stock Quantity</label>
+                        <input type="number" id="productStock" min="0" required placeholder="0">
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <button type="submit" id="submitBtn" class="btn-primary">Add Product</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

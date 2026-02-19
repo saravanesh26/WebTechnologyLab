@@ -1,0 +1,37 @@
+[
+    {
+        "id": "P001",
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "price": 25.99,
+        "stock": 50
+    },
+    {
+        "id": "P002",
+        "name": "Mechanical Keyboard",
+        "category": "Electronics",
+        "price": 89.99,
+        "stock": 15
+    },
+    {
+        "id": "P003",
+        "name": "USB-C Cable",
+        "category": "Accessories",
+        "price": 12.50,
+        "stock": 100
+    },
+    {
+        "id": "P004",
+        "name": "Monitor Stand",
+        "category": "Furniture",
+        "price": 45.00,
+        "stock": 5
+    },
+    {
+        "id": "P005",
+        "name": "External SSD 1TB",
+        "category": "Storage",
+        "price": 120.00,
+        "stock": 8
+    }
+]
