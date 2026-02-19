@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Sony WH-1000XM5",
+        "price": 349.99,
+        "category": "Electronics",
+        "image": "https://m.media-amazon.com/images/I/412p+hL0-PL._AC_SL1000_.jpg",
+        "description": "Premium wireless noise-canceling headphones with exceptional sound quality."
+    },
+    {
+        "id": 2,
+        "name": "Logitech MX Master 3S",
+        "price": 99.99,
+        "category": "Accessories",
+        "image": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-mouse-top-view-graphite.png?v=1",
+        "description": "Ergonomic performance wireless mouse for maximum productivity."
+    },
+    {
+        "id": 3,
+        "name": "Apple MacBook Air M2",
+        "price": 1099.00,
+        "category": "Laptops",
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653084303665",
+        "description": "Supercharged by M2, listing incredible performance and battery life."
+    },
+    {
+        "id": 4,
+        "name": "Samsung Galaxy S23 Ultra",
+        "price": 1199.99,
+        "category": "Smartphones",
+        "image": "https://image-us.samsung.com/us/smartphones/galaxy-s23/configurator/D3_Purple_Configurator_DT_800x600.jpg",
+        "description": "The ultimate smartphone experience with a 200MP camera and S Pen."
+    },
+    {
+        "id": 5,
+        "name": "Keychron K2 Pro",
+        "price": 109.00,
+        "category": "Accessories",
+        "image": "https://cdn.shopify.com/s/files/1/0059/0630/1017/products/Keychron-K2-Pro-QMK-VIA-Wireless-Mechanical-Keyboard-for-Mac-Windows-Linux-RGB-Backlight-Aluminum-Frame-Hot-Swappable-Keychron-K-Pro-Red-Switch_1800x1800.jpg?v=1664184646",
+        "description": "Wireless mechanical keyboard with QMK/VIA support for full customization."
+    },
+    {
+        "id": 6,
+        "name": "Nike Air Zoom Pegasus 40",
+        "price": 130.00,
+        "category": "Footwear",
+        "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-zoom-pegasus-40-mens-road-running-shoes-MCnWsq.png",
+        "description": "A springy ride for every run with responsive cushioning."
+    },
+    {
+        "id": 7,
+        "name": "Hydro Flask Wide Mouth",
+        "price": 44.95,
+        "category": "Lifestyle",
+        "image": "https://www.hydroflask.com/media/catalog/product/w/3/w32ts415-white-straight_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
+        "description": "Keeps beverages cold up to 24 hours and hot up to 12 hours."
+    },
+    {
+        "id": 8,
+        "name": "Kindle Paperwhite",
+        "price": 139.99,
+        "category": "Electronics",
+        "image": "https://m.media-amazon.com/images/I/51p4-z7iBwL._AC_SL1000_.jpg",
+        "description": "Now with a 6.8” display and thinner borders, adjustable warm light."
+    }
+]

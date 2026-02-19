@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Product Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glob"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1>Product Findr</h1>
+            <p>Search for your favorite items instantly.</p>
+        </header>
+
+        <div class="search-container">
+            <div class="input-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Type to search products..." autocomplete="off">
+            </div>
+            <div id="loader" class="loader hidden"></div>
+        </div>
+
+        <div id="resultsContainer" class="results-grid">
+            <!-- Results will be injected here -->
+            <div class="empty-state">
+                <p>Start typing to search for products.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
