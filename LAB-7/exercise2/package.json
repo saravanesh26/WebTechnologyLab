@@ -1,0 +1,28 @@
+{
+  "name": "online-book-finder",
+  "version": "1.0.0",
+  "description": "Online Book Finder with advanced MongoDB query operations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "mongodb",
+    "books",
+    "search",
+    "filter",
+    "pagination",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.9.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Online Book Finder</h1>
+            <p>Search, Filter, and Discover Books</p>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <section class="controls-section">
+            <div class="search-box">
+                <h3>🔍 Search by Title</h3>
+                <div class="search-input-group">
+                    <input type="text" id="searchInput" placeholder="Enter book title (e.g., JavaScript)">
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
+                    <button id="clearSearchBtn" class="btn btn-secondary">Clear</button>
+                </div>
+            </div>
+
+            <div class="filters-box">
+                <h3>🎯 Filters & Sort</h3>
+                
+                <div class="filter-grid">
+                    <!-- Category Filter -->
+                    <div class="filter-item">
+                        <label for="categorySelect">Category:</label>
+                        <select id="categorySelect">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort By -->
+                    <div class="filter-item">
+                        <label for="sortSelect">Sort By:</label>
+                        <select id="sortSelect">
+                            <option value="">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="rating-desc">Rating: High to Low</option>
+                            <option value="rating-asc">Rating: Low to High</option>
+                            <option value="year-desc">Year: Newest First</option>
+                            <option value="title-asc">Title: A to Z</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="filter-item">
+                        <label for="minPrice">Min Price:</label>
+                        <input type="number" id="minPrice" placeholder="₹0" min="0">
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="maxPrice">Max Price:</label>
+                        <input type="number" id="maxPrice" placeholder="₹1000" min="0">
+                    </div>
+
+                    <!-- Min Rating -->
+                    <div class="filter-item">
+                        <label for="minRating">Min Rating:</label>
+                        <select id="minRating">
+                            <option value="">Any</option>
+                            <option value="4.5">4.5+ ⭐</option>
+                            <option value="4">4+ ⭐</option>
+                            <option value="3.5">3.5+ ⭐</option>
+                            <option value="3">3+ ⭐</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <button id="applyFiltersBtn" class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button id="topRatedBtn" class="btn btn-accent">⭐ Top Rated Books</button>
+                <button id="allBooksBtn" class="btn btn-secondary">📖 Show All Books</button>
+                <button id="resetBtn" class="btn btn-secondary">🔄 Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="results-header">
+                <h2>Results</h2>
+                <div class="results-info">
+                    <span id="resultsCount" class="results-count">Loading...</span>
+                    <span id="currentQuery" class="current-query"></span>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div id="booksContainer" class="books-grid">
+                <p class="loading">Loading books...</p>
+            </div>
+
+            <!-- Pagination -->
+            <div id="paginationContainer" class="pagination-container">
+                <!-- Pagination will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
